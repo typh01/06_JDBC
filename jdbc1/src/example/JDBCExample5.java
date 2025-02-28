@@ -55,6 +55,19 @@ public class JDBCExample5 {
 			
 			String sql = sb.toString();
 			
+			/*
+			 * // """ """ : 작성된 문자열 형태 그대로 저장
+			 * 
+			 * String sql = String.format(""" 
+			 * SELECT E.EMP_ID, E.EMP_NAME, D.DEPT_TITLE, J.JOB_NAME 
+			 * FROM EMPLOYEE E 
+			 * JOIN JOB J ON (E.JOB_CODE = J.JOB_CODE) 
+			 * JOIN DEPARTMENT D ON (E.DEPT_CODE = D.DEPT_ID) 
+			 * WHERE DEPT_TITLE = '%s' 
+			 * ORDER BY E.JOB_CODE ASC """, input);
+			 */
+			
+			
 			stmt = conn.createStatement();
 			
 			rs = stmt.executeQuery(sql);
@@ -70,10 +83,9 @@ public class JDBCExample5 {
 						empId, empName, deptCode, jobName);
 			}
 			
-		} catch (SQLException e) {
+		}catch (Exception e) { 
 			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+		
 		} finally {
 			try {
 				if(rs != null) rs.close();

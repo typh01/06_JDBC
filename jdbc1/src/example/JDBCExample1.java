@@ -70,7 +70,7 @@ public class JDBCExample1 {
 			String port = ":12345";
 			String dbName = ":XE";
 			String userName= "KH12_PTH";
-			String password = "KH1234";
+			String password = "KH1 234";
 			
 			/* 2-3. DriverManager를 이용해서 Connection 객체 생성*/
 
