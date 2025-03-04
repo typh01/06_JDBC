@@ -30,9 +30,9 @@ public class JDBCExample2 {
 		 * 		-> Statement는 문자열 결합 방식으로 SQL을 만듦
 		 * 			-> 결합되는 문자열이 SQL 명령어 또는 '값' 모두 가능
 		 * 
-		 * 	PreparedStatement는 
-		 * 	?(placeholder)를 이용해서 파라미터(값)만 연결 하기 때문에 
-		 *  SQL Injection을 방지할 수 있다!
+			 * 	PreparedStatement는 
+			 * 	?(placeholder)를 이용해서 파라미터(값)만 연결 하기 때문에 
+			 *  SQL Injection을 방지할 수 있다!
 		 */
 		
 		try {
