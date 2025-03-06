@@ -13,7 +13,7 @@ public class UserDTO {
 	public UserDTO() {
 		super();
 	}
-	
+
 	public UserDTO(int userNo, String userId, String userPw, String userName, Date enrollDate) {
 		super();
 		this.userNo = userNo;
